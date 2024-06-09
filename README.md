@@ -3,7 +3,7 @@
 Proyek ini merupakan aplikasi Vue.js untuk bank fiktif bernama "Bank Lamongan". Ini mencakup halaman login dan formulir transaksi.
 
 ## ScreenShot Preview Bank Lamongan
-![Bank Lamongan Logo](./assets/LoginSS_bank_lamongan.png)
+![Bank Lamongan Logo](src/assets/LoginSS_bank_lamongan.png)
 
 
 ### Dependencies
