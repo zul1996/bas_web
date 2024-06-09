@@ -70,13 +70,11 @@ const handleSubmit = async () => {
   try {
     const response = await myAxios.post("/transaction/create", formData.value);
     console.log("Response:", response.data);
-    // Handle success, e.g., show a message or redirect
   } catch (error) {
     console.error(
       "Error:",
       error.response ? error.response.data : error.message
     );
-    // Handle error, e.g., show an error message
   }
 };
 </script>
@@ -95,15 +93,15 @@ const handleSubmit = async () => {
   height: 40px;
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #ccc; /* 1px solid border */
-  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .button {
   width: 100%;
   height: 40px;
-  background-color: #808080; /* Grey color */
-  color: #fff; /* White text color */
+  background-color: #808080;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -113,7 +111,7 @@ const handleSubmit = async () => {
 }
 
 .button:hover {
-  background-color: #336699; /* Blue color on hover */
+  background-color: #336699;
 }
 </style>
 
@@ -131,15 +129,15 @@ const handleSubmit = async () => {
   height: 40px;
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #ccc; /* Add a 1px solid border with color #ccc */
-  border-radius: 5px; /* Add border radius for rounded corners */
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .button {
   width: 100%;
   height: 40px;
-  background-color: #808080; /* Grey color */
-  color: #fff; /* White text color */
+  background-color: #808080;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -149,6 +147,6 @@ const handleSubmit = async () => {
 }
 
 .button:hover {
-  background-color: #336699; /* Elegant blue color on hover */
+  background-color: #336699;
 }
 </style>

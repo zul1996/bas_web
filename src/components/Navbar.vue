@@ -1,10 +1,10 @@
 <script setup>
 import { useAuthStore } from "@/stores/auth";
 import { computed } from "vue";
-import { useRouter } from "vue-router"; // Import useRouter
+import { useRouter } from "vue-router";
 
 const auth = useAuthStore();
-const router = useRouter(); // Use useRouter
+const router = useRouter();
 
 const loginButtonLabel = computed(() => {
   return auth.isLoggedIn ? "Logout" : "Login";
@@ -66,7 +66,6 @@ const handleLogout = async () => {
   font-weight: 500;
 }
 
-/* List styles */
 ul {
   list-style-type: none;
   display: flex;
@@ -74,7 +73,6 @@ ul {
   padding: 0;
 }
 
-/* List item styles */
 ul li {
   margin: 0 8px;
 }
@@ -83,20 +81,16 @@ ul li {
   display: none;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
-  /* Adjust the flex direction to column for smaller screens */
   .navbar .d-flex {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Center the logo */
   .logo_text {
     margin-bottom: 10px;
   }
 
-  /* Stack list items vertically */
   ul {
     display: none;
   }
@@ -106,12 +100,12 @@ ul li {
   }
 
   ul.hidden {
-    display: flex; /* Show the navbar when not hidden */
+    display: flex;
     flex-direction: column;
-    background-color: #333; /* Ensure background matches navbar */
-    position: absolute; /* Overlay menu */
-    top: 50px; /* Position below the navbar */
-    right: 10px; /* Align to the right */
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 10px;
     border: 1px solid #ddd;
     padding: 10px;
   }
@@ -122,12 +116,10 @@ ul li {
 }
 
 @media (max-width: 480px) {
-  /* Reduce padding for even smaller screens */
   .navbar {
     padding: 5px 10px;
   }
 
-  /* Adjust the font size for the logo */
   .logo_text {
     font-size: 1.2rem;
   }

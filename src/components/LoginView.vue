@@ -62,7 +62,6 @@ const myAxios = inject("myAxios");
 
 const handleLogin = async () => {
   try {
-    // Make sure to set snackbar to false before making the login request
     data.snackbar = false;
 
     const response = await myAxios.post("auth/login", {
@@ -70,21 +69,16 @@ const handleLogin = async () => {
       password: data.password,
     });
 
-    // Check if response status is 200
     if (response.status === 200) {
-      // Authentication successful
       auth.authenticated();
       router.push("transaction");
     } else {
-      // Handle other response statuses if necessary
       throw new Error("Invalid response status");
     }
 
-    // Set success message and snackbar color
     data.pesanLogin = "Login Successfully";
     data.snackbarColor = "success";
   } catch (error) {
-    // Handle login errors
     console.error("Login failed", error);
     data.pesanLogin =
       error.response && error.response.status === 401
@@ -92,7 +86,6 @@ const handleLogin = async () => {
         : "Error Logging in";
     data.snackbarColor = "error";
   } finally {
-    // Always set snackbar to true after login attempt, regardless of success or failure
     data.snackbar = true;
   }
 };
